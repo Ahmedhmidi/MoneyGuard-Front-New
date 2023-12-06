@@ -1,0 +1,74 @@
+/* Style for the container */
+.container-custom {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    margin: 50px;
+  }
+  
+  /* Style for the card */
+  .card {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style for the headings */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue heading color */
+  }
+  
+  /* Style for the form group and labels */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the input fields */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    background-color: #f7f7f7; /* Light gray input background */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+  
+  .form-control:focus {
+    background-color: #fff; /* White input background on focus */
+  }
+  
+  /* Style for the submit button */
+  .btn-primary {
+    background-color: #007bff; /* Blue button background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Style for the card text */
+  .card-text {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Additional styling for the strong tags */
+  .card-text strong {
+    font-weight: bold;
+    color: #007bff; /* Blue strong tag color */
+  }
+  

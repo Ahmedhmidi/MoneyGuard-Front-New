@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~leaflet/dist/leaflet.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.text-center {
+    text-align: center;
+  }
+  
+  .map-container {
+    height: 400px;
+  }
+
+  body {
+    /* background-image: url('assets/Images/MoneyGuard5.png');  */
+     /*Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .footer {
+    background-image: url('assets/Images/MoneyGuard6.png'); /* Replace with your image path */
+    background-size: cover; /* Adjust to your preference */
+    background-repeat: no-repeat; /* Adjust to your preference */
+    background-position: center; /* Adjust to your preference */
+  }

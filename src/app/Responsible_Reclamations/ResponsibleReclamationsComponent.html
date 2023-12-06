@@ -1,0 +1,27 @@
+<!-- Display a text message -->
+<p class="text-center display-4 mb-5">All reclamations</p>
+
+<!-- Create a container for the list of solutions -->
+<div class="container">
+  <div class="row gy-4">
+    <!-- Loop through the 'solutions' array using Angular's *ngFor directive -->
+    <div *ngFor="let dispense of Dispenses" class="col-lg-4 col-md-6">
+      <!-- Create a card for each solution -->
+      <div class="card h-100 shadow">
+        <!-- Card content -->
+        <div class="card-body d-flex flex-column">
+          <!-- Display the solution's title -->
+          <h5 class="card-title">{{dispense.amount}}</h5>
+          <!-- Display the solution's description -->
+          <h3 class="card-title">{{dispense.date}}</h3>
+          <!-- Display the solution's title -->
+          <h2 class="card-title">{{dispense.paymentMethod}}</h2>
+          <!-- Display the solution's description -->
+          <p class="card-text flex-grow-1">{{dispense.description}}</p>
+          <!-- Display the solution's provider name -->
+          <p class="card-text"><strong>Provider:</strong> {{dispense?.providerId}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

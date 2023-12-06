@@ -1,0 +1,19 @@
+/* Adjust card layout */
+.card {
+    margin-bottom: 20px;
+  }
+  
+  /* Style the messaging link */
+  .message-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  /* Style the messaging icon */
+  .message-link i {
+    margin-right: 5px;
+  }
+  

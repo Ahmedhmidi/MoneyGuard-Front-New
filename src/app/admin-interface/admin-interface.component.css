@@ -1,0 +1,44 @@
+.application-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .application-table th,
+  .application-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .application-table th {
+    font-weight: bold;
+  }
+  
+  .file-link {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .file-link:hover {
+    text-decoration: underline;
+  }
+  
+  .action-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .action-button + .action-button {
+    margin-left: 5px;
+  }
+  
+  .action-button:hover {
+    background-color: #45a049;
+  }
+  

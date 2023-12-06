@@ -1,0 +1,200 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<!-- Hero section -->
+<!-- mise a jour de ahmed -->
+<div class="jumbotron  text-center text-white" style="background-color: #0d1756;">
+  <h1 style="font-size: 45px;" class="mb-5" align="left">Welcome to MoneyGuard</h1>
+  <div class="row">
+    <div class="col-lg-6">
+      <p style="font-size:15px;text-align: justify;">A highly popular budget management application for iPhone and
+        Android. Once all your income and expenses are entered into the application,
+        it generates various daily, weekly, and monthly reports to allow you to easily track your transactions.
+      </p>
+      <div class="" align="left">
+        <button class="btn-see-more mt-3">See More</button>
+      </div>
+
+    </div>
+    <div class="col-lg-6">
+      <img src="../../assets/Images/moneyGuard.png" style="border-radius: 100%;" width="250" alt="">
+    </div>
+
+  </div>
+
+  <hr class="my-4">
+  <p style="font-size:15px;">Explore our features and services. Register or log in to access more!</p>
+  <span class="pub-message" style="font-size: 13px; color: #bcbdc0;">
+    <a [routerLink]="['/provider-application']">If you'd like to join us as a financial, you're welcome!</a>
+  </span>
+</div>
+
+<!-- Features section -->
+<div class="container">
+  <!-- mise a jour de ahmed -->
+  <h2 align="center" class="mb-5 mt-5">Our Features & Services</h2>
+
+  <div class="row" id="service">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <div align="center" class="mb-5">
+            <img src="../../assets/Images/confiance.png" width="64">
+          </div>
+          <p class="card-text">MoneyGuard ensures that all its providers are certified professionals in their
+            respective
+            fields.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <div align="center" class="mb-5">
+
+            <img src="../../assets/Images/machine-learning.png" width="64">
+          </div>
+          <p class="card-text">Powered by Machine Learning: MoneyGuard employs cutting-edge machine learning
+            algorithms
+            to automate expense categorization, track spending patterns, and offer tailored financial insights. It's
+            your intelligent companion for informed financial decisions and goal achievement.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <div align="center" class="mb-5">
+
+            <img src="../../assets/Images/notification.png" width="64">
+          </div>
+          <p class="card-text">Stay Informed with MoneyGuard: Our real-time notifications keep you updated on
+            financial
+            matters, ensuring you never miss important updates. From bill reminders to budget insights, MoneyGuard
+            provides peace of mind with timely alerts for your financial well-being.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (caroousal section) -->
+<div class="mt-5" id="carousal">
+  <div id="carouselExampleCaptions" class="carousel slide shadow-lg mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active img-fluid">
+        <img src="../../assets/Images/gruppo-di-persone-che-elaborano-business-plan-in-un-ufficio.jpg" class="d-block w-100" height="500" alt="pic1" />
+        <div class="carousel-caption d-none d-md-block">
+          <h2></h2>
+          <h5>
+            <p>Checkout our Latest service NOW</p>
+          </h5>
+        </div>
+      </div>
+      <div class="carousel-item img-fluid">
+        <img src="../../assets/Images/il-bitcoin-dorato-nelle-mani-della-posta.jpg" class="d-block w-100" height="500" alt="pic2" />
+        <div class="carousel-caption d-none d-md-block">
+          <h2>"MoneyGuard provides you with a comprehensive solution, ranging from the smallest financial details to
+            grand financial goals. We're dedicated to demystifying the world of finance and ensuring that you have all
+            the tools you need for financial success."</h2>
+
+        </div>
+      </div>
+      <div class="carousel-item img-fluid">
+        <img src="../../assets/Images/il-business-dei-bitcoin-come-parte-dell-economia.jpg" class="d-block w-100" height="500" alt="pic3" />
+        <div class="carousel-caption d-none d-md-block">
+          <h2>"Our team has the expertise and resources to guide you through every step of your project, from ideation
+            to execution. With our help, you can turn your vision into a reality."</h2>
+
+        </div>
+      </div>
+
+
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<!-- Container (about Section) -->
+<!-- <div id="about" class="container-fluid d-flex flex-column justify-content-center align-items-center">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>About Company Page</h2><br>
+      <h4>At MoneyGuard, we take pride in offering a wide range of services designed to meet all your financial needs.
+        Whether you're seeking to enhance your financial well-being, manage your budget more effectively, or receive
+        personalized financial advice, our dedicated team is here to assist you. We are committed to delivering top-tier
+        service and excellence in everything we undertake. Your financial success is our priority.</h4>
+      <p>With MoneyGuard, we understand that managing your personal finances can be a challenge in today's busy world.
+        We offer a comprehensive solution that brings financial convenience right to your fingertips. Whether you're
+        looking to track your expenses, set and manage budgets, or receive personalized financial recommendations, our
+        user-friendly application has you covered. Our mission is to empower you to make informed financial decisions
+        and achieve your financial goals with ease.</p>
+      <br>
+    </div>
+  </div>
+</div> -->
+
+<section class="space bg-cover" style="background:rgb(3, 9, 59) url(assets/img/landing-bg.png) no-repeat;">
+  <div class="container py-5">
+
+    <div class="row justify-content-center">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="sec_title position-relative text-center mb-5">
+          <h2 class="text-light mb-0">About us</h2>
+          <h2 class="ft-bold text-light">Get All New MoneyGuard Notification</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+      <div class="col-xl-7 col-lg-10 col-md-12 col-sm-12 col-12">
+        <form class="rounded p-1">
+          <div class="row no-gutters">
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-8">
+              <div class="form-group mb-0 position-relative">
+                <input type="text" class="form-control lg left-ico" placeholder="Enter Your Email Address">
+                <i class="bnc-ico lni lni-envelope"></i>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+              <div class="form-group mb-0 position-relative">
+                <button class="btn full-width custom-height-lg theme-bg fs-md" type="button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<!-- End of .container -->

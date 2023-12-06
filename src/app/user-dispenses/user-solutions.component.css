@@ -1,0 +1,18 @@
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+  

@@ -1,0 +1,132 @@
+<div class="dashboard-container" id="dash">
+  
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card chart-card">
+          <div class="card-body">
+            <div class="chart-container">
+              <h3 class="chart-title">Expense Breakdown Bar Chart</h3>
+              <p class="chart-description">This bar chart provides a visual representation of your expenses based on
+            differenh3
+            categories. Each bar represents a category, and the length of the bar corresponds to the percentage of your
+            total expenses in that category. Hover over the bars to see the exact percentage.</p>
+          <canvas #chartCanvas></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+     <div class="col-md-6">
+       <div class="card">
+        <div class="card-body">
+          <h3 class="chart-title">Pie Chart</h3>
+           <div class="pie-chart-container">
+            <p class="chart-description">The pie chart offers a clear overview of your expense distribution. Each segment
+            of
+            the pie represents a spending category, and the size of the segment indicates the percentage of your total
+            expenses in that category. Hover over the segments to see the exact percentage.</p>
+           <canvas #pieChartCanvas height="500"></canvas>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+
+    <br>
+    <br>
+    <div class="card">
+      <h3 class="card-title" align="center">Financial Strategies for the Future</h3>
+      <!-- Autres éléments de la carte si nécessaire -->
+    </div>    
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card">
+          <img class="card-img-top" src="../../assets/Images/ANalyse state.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Analyst Statistics</h5>
+            <p class="card-text">Our advanced analytics provide you with insights into your spending habits. By
+              analyzing your expenses, we can help you make more informed financial decisions. Check out the charts
+              above to
+              get
+              a comprehensive view of your spending trends.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <img class="card-img-top" src="../../assets/Images/Understanding.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Understanding Your Expenses</h5>
+            <p class="card-text">To get the most out of the charts, it's essential to understand your spending
+              patterns.
+              Pay attention to categories with larger bars or segments as they indicate where you allocate a significant
+              portion
+              of your budget. This information can help you identify areas where you might consider cutting back or
+              optimizing
+              your spending.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <img class="card-img-top" src="../../assets/Images/Analyse 222222222222222222.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Analyst Statistics</h5>
+            <p class="card-text">Our advanced analytics provide you with insights into your spending habits. By
+              analyzing your expenses, we can help you make more informed financial decisions. Check out the charts
+              above to
+              get
+              a comprehensive view of your spending trends.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <!--
+     <h3 class="chart-title">Useful Tips</h3>
+    <br>
+    <ul>
+      <li> 1. Regularly review these charts to stay aware of your spending habits.
+      </li>
+      <li> 2. Set budget goals and monitor your progress using the charts.
+      </li>
+      <li>3. Compare your expenses over different time periods to track changes.</li>
+
+    </ul>
+
+
+
+    <h3 class="chart-title">Taking Control of Your Finances</h3>
+    <p class="chart-description" style="width: 60%;text-align: justify;">We're here to help you achieve your financial goals. By visualizing your spending and
+      analyzing your financial patterns, you're better equipped to make informed decisions. Use these charts as a tool
+      to take control of your finances and work toward a more secure financial future.</p>
+  </div>
+</div> -->
+
+<!-- Add a clickable link or button -->
+<button (click)="toggleFinancialsVisibility()">Show Financials</button>
+
+<!-- Display financials in small cards based on visibility flag -->
+<div *ngIf="showFinancials" class="financials-container">
+  <!-- Iterate over financials and display them in small cards -->
+  <div *ngFor="let financial of financials" class="financial-card">
+    <a [routerLink]="['/chat', {providerUsername: financial.name}]">
+    
+    <!-- Display financial information here -->
+    <p>{{ financial.name }}</p>
+    <p>{{ financial.lastname }}</p>
+    <p>{{ financial.email }}</p>
+    <!-- Add other financial details as needed -->
+  </a>
+  </div>
+</div>

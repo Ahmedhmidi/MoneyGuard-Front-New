@@ -1,0 +1,40 @@
+
+          <form [formGroup]="empDetail">
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Name </label>
+              <input type="text" formControlName="name" class="form-control" id="exampleInputName" aria-describedby="exampleInputName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputLastName" class="form-label">LastName </label>
+              <input type="text" formControlName="lastname" class="form-control" id="exampleInputLastName" aria-describedby="exampleInputLastName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputBirthday" class="form-label">Birthday </label>
+              <input type="date" formControlName="birthday" class="form-control" id="exampleInputBirthday" aria-describedby="exampleInputBirthday">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPhone" class="form-label">Phone </label>
+              <input type="text" formControlName="phone" class="form-control" id="exampleInputPhone" aria-describedby="exampleInputPhone">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail" class="form-label">Email </label>
+              <input type="email" formControlName="email" class="form-control" id="exampleInputEmail" aria-describedby="exampleInputEmail">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputUserName" class="form-label">UserName</label>
+              <input type="text" formControlName="username" class="form-control" id="exampleInputUserName" aria-describedby="exampleInputUserName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword" class="form-label">Password</label>
+              <input type="password" formControlName="password" class="form-control" id="exampleInputPassword" aria-describedby="exampleInputPassword">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputRole" class="form-label">Role</label>
+              <input type="text" formControlName="role" class="form-control" id="exampleInputRole" aria-describedby="exampleInputRole">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="addEmployee()">Add employee</button>
+            </div>
+         </form>
+

@@ -1,0 +1,28 @@
+<!-- Display a text message -->
+<p>Reclamation works!</p>
+
+<!-- Create a container for the list of services -->
+<div class="container">
+  <div class="row">
+    <!-- Loop through the 'services' array using Angular's *ngFor directive -->
+    <div *ngFor="let dispense of dispenses" class="col-sm-4">
+      <!-- Create a card for each service -->
+      <div class="card">
+        <!-- Display an image for the service -->
+        <img src="http://localhost:8082/api/images/solution-{{dispense.id}}.png" class="card-img-top img-responsive" alt="Image">
+        <!-- Card content -->
+        <div class="card-body">
+          <!-- Display the service's title -->
+          <h5 class="card-title">{{dispense.amount}}</h5>
+          <h3>class="card-title">{{dispense.date}}</h3>
+          <h3>class="card-title">{{dispense.paymentMethod}}</h3>
+          <!-- Display the service's description -->
+          <p class="card-text">{{dispense.description}}</p>
+                  <!-- Display the reclamation 's user name -->
+            <i class="fas fa-envelope"></i> Message {{dispense.providerId}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

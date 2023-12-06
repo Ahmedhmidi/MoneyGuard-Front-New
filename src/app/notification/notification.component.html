@@ -1,0 +1,13 @@
+<div class="notifications-container">
+  <ng-container *ngIf="notifications.length > 0; else noNotifications">
+    <div *ngFor="let notification of notifications" class="notification-item">
+      <p>{{ notification.message }}</p>
+      <button class="delete-button" (click)="deleteNotification(notification.id)">
+        <i class="fas fa-trash"></i>
+      </button>
+    </div>
+  </ng-container>
+  <ng-template #noNotifications>
+    <p>No notifications available.</p>
+  </ng-template>
+</div>

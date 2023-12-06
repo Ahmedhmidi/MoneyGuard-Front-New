@@ -1,0 +1,98 @@
+
+<!-- to list all the employees-->
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">User ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">LastName</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Username</th>
+      <th scope="col">JobTitle</th>
+      <th scope="col">Grade</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of empList">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.jobTitle}}</td>
+      <td>{{user.grade}}</td>
+      <td>
+        <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="editEmployee(user)">Edit</button>
+        <button type="button" class="btn btn-outline-danger" (click)="deleteEmployee(user)">Delete</button>
+      </td>
+
+    </tr>
+
+    </tbody>
+  </table>
+  <!-- Edit employee modal -->
+  <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel1">Edit employee details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form [formGroup]="empDetail">
+            <div class="mb-3">
+              <label for="exampleInputName1" class="form-label">Name</label>
+              <input type="text" formControlName="name" class="form-control" id="exampleInputName1" aria-describedby="exampleInputName1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputLastName1" class="form-label">LastName</label>
+              <input type="text" formControlName="lastname" class="form-control" id="exampleInputLastName1" aria-describedby="exampleInputLastName1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPhone1" class="form-label">Phone</label>
+              <input type="text" formControlName="phone" class="form-control" id="exampleInputPhone1" aria-describedby="exampleInputPhone1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="exampleInputEmail1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputUserName1" class="form-label">UserName</label>
+              <input type="text" formControlName="username" class="form-control" id="exampleInputUserName1" aria-describedby="exampleInputUserName1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="text" formControlName="password" class="form-control" id="exampleInputPassword1" aria-describedby="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputJibTitle" class="form-label">JobTitle</label>
+              <input type="text" formControlName="jobTitle" class="form-control" id="exampleInputJibTitle" aria-describedby="exampleInputJibTitle">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputGrade" class="form-label">Grade</label>
+              <input type="text" formControlName="grade" class="form-control" id="exampleInputGrade" aria-describedby="exampleInputGrade">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputRole1" class="form-label">Role</label>
+              <input type="text" formControlName="role" class="form-control" id="exampleInputRole1" aria-describedby="exampleInputRole1">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-success" (click)="updateEmployee()" data-bs-dismiss="modal">Update </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--</div>-->
+
+

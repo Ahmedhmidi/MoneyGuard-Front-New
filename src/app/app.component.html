@@ -1,0 +1,180 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<div id="app">
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <a class="navbar-brand" href="#">MoneyGuard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link ml-auto navbar-title" routerLink="home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminBoard">
+          <a class="nav-link ml-auto navbar-title" routerLink="admin">Admin Board</a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminBoard">
+          <a class="nav-link ml-auto navbar-title " routerLink="admin_interface">See Providers Requests</a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminBoard">
+          <a class="nav-link ml-auto navbar-title" routerLink="add_employee">Add new User</a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminBoard">
+          <a class="nav-link ml-auto navbar-title" routerLink="add_categorie">Add new Categorie</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link ml-auto navbar-title" routerLink="form_solution">Add a Dispense</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link ml-auto navbar-title" routerLink="user-solutions">My Dispenses</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link ml-auto navbar-title" routerLink="budget">My Budget</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link ml-auto navbar-title" routerLink="dashboard">My dashboard</a>
+        </li>
+        <li class="nav-item" *ngIf="showFinancialBoard">
+          <a class="nav-link ml-auto navbar-title" routerLink="reclamations-responsible">all the Clients Statics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ml-auto navbar-title" *ngIf="isLoggedIn" routerLink="user">User</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a class="nav-link ml-auto navbar-title" routerLink="register"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ml-auto navbar-title" routerLink="login"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+      </ul>
+      
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/profile">{{ username }}</a>
+        </li>
+        <li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/notifications">
+            <i class="fas fa-bell"></i>
+            <span class="badge badge-pill badge-danger">3</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/messages">
+             <i class="fas fa-comment-dots"></i>
+             <span class="badge badge-pill badge-danger">3</span>
+          </a>
+       </li>
+        <li class="nav-item">
+          <a class="nav-link ml-auto navbar-title" (click)="logout()"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+   
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+    <!-- Add the chat button -->
+    <button id="chatButton" (click)="openChat()" class="btn btn-primary">
+      <i class="fas fa-robot"></i>
+    </button>
+    <app-chatbot ></app-chatbot>
+
+<!-- Footer section -->
+<footer class="text-white" style="background-color: #3b5998;bottom: 0;position:relative">
+  <!-- Grid container -->
+  <div class="container-fluid p-4">
+    <!--Grid row-->
+    <div class="row mt-4">
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12">
+        <h5 class="text-uppercase mb-4" align="left">SUCCESS COMMITMENT</h5>
+
+        <p style="text-align: left;"><strong style="color: gold;" >At MoneyGuard,</strong>, we're not just a financial service provider; we're
+          your trusted partner on the journey to financial success.
+          Experience the difference today!"
+
+        <div class="mt-4 d-flex justify-content-center mb-4" >
+          <!-- Facebook -->
+          <a type="button" class="btn btn-floating btn-warning btn-lg mx-2"><i class="fab fa-facebook-f"></i></a>
+          <!-- Dribbble -->
+          <a type="button" class="btn btn-floating btn-warning btn-lg mx-2"><i class="fab fa-dribbble"></i></a>
+          <!-- Twitter -->
+          <a type="button" class="btn btn-floating btn-warning btn-lg mx-2"><i class="fab fa-twitter"></i></a>
+          <!-- Google + -->
+          <a type="button" class="btn btn-floating btn-warning btn-lg mx-2"><i class="fab fa-google-plus-g"></i></a>
+          <!-- Linkedin -->
+        </div>
+      </div>
+      <!--Grid column-->
+      
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12">
+        <h5 class="text-uppercase mb-4 pb-1">Search something</h5>
+
+        <div class="form-outline form-white mb-4">
+          <input type="text" id="formControlLg" placeholder="Search" class="form-control form-control-lg">
+          <!-- <label class="form-label" for="formControlLg" style="margin-left: 0px;">Search</label> -->
+          <div class="form-notch">
+            <div class="form-notch-leading" style="width: 9px;"></div>
+            <div class="form-notch-middle" style="width: 48.8px;"></div>
+            <div class="form-notch-trailing"></div>
+          </div>
+        </div>
+
+        <ul class="fa-ul" style="margin-left: 1.65em;text-align: left;">
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Tunis, Tunsia</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">info@MoneyGuard.com</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+216 27241647 +216 58956498</span>
+          </li>
+        
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12">
+        <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+        <table class="table text-center text-white">
+          <tbody class="font-weight-normal">
+            <tr>
+              <td>Mon - Thu:</td>
+              <td>8am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Fri - Sat:</td>
+              <td>8am - 1am</td>
+            </tr>
+            <tr>
+              <td>Sunday:</td>
+              <td>9am - 10pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    2024 MoneyGuard. All rights reserved :
+    <a class="text-white" href="https://mdbootstrap.com/"></a>
+  </div>
+  <!-- Copyright -->
+</footer>

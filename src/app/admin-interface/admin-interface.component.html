@@ -1,0 +1,32 @@
+<table class="application-table">
+  <thead>
+    <tr>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Certification</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="applications.length > 0; else noApplications">
+      <tr *ngFor="let application of applications">
+        <td>{{ application.fullName }}</td>
+        <td>{{ application.email }}</td>
+        <td>
+          <a [href]="application.certificationFileUrl" class="file-link">View</a>
+        </td>
+        <td>{{ application.status }}</td>
+        <td>
+          <button (click)="onReview(application.id, { status: 'approved' })" class="action-button">Approve</button>
+          <button (click)="onReview(application.id, { status: 'rejected' })" class="action-button">Reject</button>
+        </td>
+      </tr>
+    </ng-container>
+    <ng-template #noApplications>
+      <tr>
+        <td colspan="5">No applications found.</td>
+      </tr>
+    </ng-template>
+  </tbody>
+</table>

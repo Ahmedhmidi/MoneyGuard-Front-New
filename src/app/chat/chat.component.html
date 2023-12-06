@@ -1,0 +1,11 @@
+<h1>Chat with {{ providerUsername }}</h1>
+
+<div *ngFor="let message of messages" class="chat-message">
+  <p>{{ message.senderUserName }} ({{ message.date | date: 'short' }}):</p>
+  <p>{{ message.object }}</p>
+</div>
+
+<div class="message-input">
+  <input [(ngModel)]="newMessage" placeholder="Type your message">
+  <button (click)="sendMessage()">Send</button>
+</div>

@@ -1,0 +1,28 @@
+<!-- messages.component.html -->
+
+<h1>Your Message History</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <h3 class="mb-3">Received Messages :</h3>
+      <div *ngFor="let message of messages?.message_one" class="message-container">
+        <!-- essayer de changer la fonction du back-end pour avoir le sender user 
+        complet et meme pour le receiver user aussi complet pour avoir les information nécessaire du message -->
+
+        <a routerLink="/chat/{{user?.username }}">
+          <div class="message-card">
+            <p>{{ user?.username }}:</p>
+            <p>{{ message?.object }}</p>
+          </div>
+        </a>
+        <!-- <a [routerLink]="['/chat', { providerUsername: user.senderUserName }]">
+          <div class="message-card">
+            <p>{{ message.senderUserName }}:</p>
+            <p>{{ message.object }}</p>
+          </div>
+        </a> -->
+      </div>
+    </div>
+   
+  </div>
+</div>
